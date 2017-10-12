@@ -1,10 +1,7 @@
 <?php
 
 $serverName = 'localhost';
-$dbname = 'restaurant';
-$userName = '';
-$password = '';
-$databaseName = "restaurant";
-
-
- ?>
+$dbname = 'boutique';
+$userName = 'root';
+$password = 'eclyps1203';
+$databaseName = "boutique";

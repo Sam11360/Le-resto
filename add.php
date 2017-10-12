@@ -1,8 +1,8 @@
 <?php
 
 include ('./config/connection.php');
-$req = $bdd->prepare('INSERT INTO plat (nom, prix, image) VALUES(?, ?, ?)');
-$req->execute(array($_POST['nom'], $_POST['prix'], $_POST['image']));
+$req = $bdd->prepare('INSERT INTO croquette (nom, prix) VALUES(?, ?)');
+$req->execute(array($_POST['nom'], $_POST['prix']));
 ?>
 
 
@@ -10,10 +10,10 @@ $req->execute(array($_POST['nom'], $_POST['prix'], $_POST['image']));
 
 <?php
 
- header('Location: plat.php');
+ header('Location: croquette.php');
 
 $req->closeCursor(); // Termine le traitement de la requête
-echo 'Plat ajouté';
+echo 'Croquette ajouté';
 
 
 

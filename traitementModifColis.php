@@ -9,13 +9,13 @@ $image = $_FILES['image']['name'];
 // $maxsize = 12345;
 // $maxwidth = 1000;
 // $maxheight = 1000;
-// On récupère l'id du plat de la page updatePlat.php
+// On récupère l'id de la croquette de la page updateCroquette.php
 $idPlat = $_GET['id'];
 // Contrôles sur le fichier :
-// Si on laisse l'image vide, le plat garde la précédente.
+// Si on laisse l'image vide, la croquette garde la précédente.
 if(empty($_FILES['image']['tmp_name'])) {
- // On modifie une entrée dans la table plats
- $req = $bdd->prepare('UPDATE `restaurant`.`plat` SET `nom` = :name, `prix` = :prix WHERE `plat`.`ID` = :id');
+ // On modifie une entrée dans la table croquette
+ $req = $bdd->prepare('UPDATE `boutique`.`croquette` SET `nom` = :name, `prix` = :prix WHERE `croquette`.`ID` = :id');
  $req->execute(array(
    'name' => $nom,
    'prix' => $prix,
@@ -36,8 +36,8 @@ else {
     if ($image_sizes[0] > $maxwidth OR $image_sizes[1] > $maxheight) $erreur = "Image trop grande";
      $resultat = move_uploaded_file($_FILES['image']['tmp_name'], "./img/".$image);
      if ($resultat) echo "Transfert réussi";
-     // On modifie une entrée dans la table plats
-     $req = $bdd->prepare('UPDATE `restaurant`.`plat` SET `name` = :name, `prix` = :prix, `image` = :image WHERE `plat`.`ID` = :id');
+     // On modifie une entrée dans la table croquette
+     $req = $bdd->prepare('UPDATE `boutique`.`croquette` SET `name` = :name, `prix` = :prix, `image` = :image WHERE `croquette`.`ID` = :id');
      $req->execute(array(
       'name' => $name,
       'prix' => $prix,
@@ -45,6 +45,6 @@ else {
       'id' => $id
         ));
 }
-// Redirection vers la page resultatPlat.php
-header('Location:listep.php');
+// Redirection vers la page listeCroquette.php
+header('Location:http://localhost/boutiqueCroquettes/listeColis.php');
 ?>

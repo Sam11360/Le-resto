@@ -1,52 +1,115 @@
 body{
-  background-image:url('img/resto.jpg');
-  background-position: 100%;
+  padding: 5%;
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 30px;
+  background-position: center;
+  }
+  #chiot{
+    width: 300px;
+    height: auto;
+  }
+  .divColis{
+    background-color: #CCCCCC;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-bottom: 5%;
+  }
+  #divColis{
+    width: 300px;
+    border: 2px solid black;
+    border-radius: 8px;
+    background-color: grey;
+    color: white;
+    font-family: Helvetica, Arial, sans-serif;
+    padding: 25px;
+    margin: 10px;
+    text-align: center;
+  }
+  .divCroq{
+    background-color: #CCCCCC;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-bottom: 5%;
+  }
+  #divCroq{
+    width: 300px;
+    border: 2px solid black;
+    border-radius: 8px;
+    background-color: grey;
+    color: white;
+    font-family: Helvetica, Arial, sans-serif;
+    padding: 25px;
+    margin: 10px;
+    text-align: center;
   }
 .accueil {
   text-align: center;
-  font-size: 23px;
-  margin-top: 150px;
+  font-size: 30px;
 }
-
+.conteneur{
+  display: flex;
+  flex-wrap: wrap;
+}
 .formulaire{
   text-align: center;
   border: grey solid;
   padding: 5%;
 }
+.formColis input{
+  text-align: right;
+}
+.formColis label{
+  text-align: left;
+}
+.formCroq{
+  background-color: #F5F5DC;
+  text-align: left;
+  padding: 10px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.formColis{
+  background-color: #F5F5DC;
+  padding: 5px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
 .contener{
   background: white;
-  text-align: center;
 }
-.menu{
-  text-align: center;
-  border: grey solid;
-  padding: 5%;
+.colis{
+  width: 30%;
+  padding: 4%;
+  height: 350px;
 }
-.plat{
-    text-align: center;
-    border: grey solid;
-    padding: 5%;
+.croq{
+    width: 30%;
+    padding: 4%;
+    height: 350px;
 }
 .choix{
   text-align: center;
   border: grey solid;
   padding: 5%;
 }
+nav{
+  background-color: gray;
+}
 ul {
     display: flex;
     width: 96%;
 }
 ul {
-
     list-style: none;
     text-decoration: none;
     margin: 0 0 1.5rem 0;
     justify-content: space-around;
-    height: 27px;
-    background: white;
+    background: gray;
+    font-size: 25px;
 }
 ol, ul {
     margin-top: 0;
@@ -54,22 +117,153 @@ ol, ul {
 }
 a{
   text-decoration: none;
-  color: black;
+  color: white;
+  font-size: 35px;
 }
-.footer{
-  background: white;
-  margin-top: 2%;
-  padding-bottom: 2%;
-  position: fixed; bottom: 0; left: 0; right: 0
-  }
-  .contact{
-    font-size: 23px;
-    padding-left: 25px;
-    padding-right: 25px;
-    margin-top: 150px;
-    margin-left: 23px;
-    text-align: left;
+.mention{
     position: fixed;
-    border: 2px #C0C0C0 soli
-    box-shadow: 6px 6px 6px #C0C0C0;
+    bottom: 0%;
+    background-color: gray;
+    width: 89%;
+    height: 6%;
+    border-top: 2px solid black;
+    text-align: center;
+    left: 5%;
   }
+.chiot{
+  width: 50%;
+  padding-top: 5%;
+}
+.chiotcolis{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding-bottom: 10%;
+}
+.chiotcroq{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding-bottom: 20%;
+}
+
+nav > ul{
+  margin: 0px;
+  padding: 0px;
+}
+nav li{
+  list-style-type: none;
+}
+nav > ul >li{
+  float: left;
+}
+.submenu{
+  display: none;
+}
+nav input[type=checkbox]{
+  display: none;
+}
+.menu-mobile{
+  display: none;
+}
+nav{
+  width: 100%;
+  background-color: grey;
+}
+nav > ul >li{
+  float: left;
+  position: relative;
+}
+nav > ul::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+nav a{
+  display: inline-block;
+  text-decoration: none;
+}
+nav > ul >li >a{
+  padding: 20px 30px;
+  color: #FFF;
+}
+nav li:hover .submenu{
+  display: inline-block;
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  padding: 0px;
+  z-index: 100000;
+}
+.submenu li{
+  border-bottom: 1px solid #CCC;
+}
+.submenu li a{
+  padding: 15px 30px;
+  font-size: 13px;
+  color: #222538;
+  width: 270px;
+  background-color: silver;
+}
+.menu-html:hover{
+  border-top: 5px solid grey;
+  background-color: RGBa(000, 112, 192, 0.15);
+}
+
+
+nav ul li, nav ul li a{
+  width: 100%;
+  text-align: center;
+}
+nav ul li a, nav ul li:hover a{
+  padding: 10px 0px 10px 0px;
+}
+nav li:hover .submenu{
+  display: block;
+  position: static;
+}
+
+
+
+@media screen and (max-width: 800px) {
+    .menu1.responsive
+    .menu1.responsive .icon {
+      display: flex;
+      justify-content: center;
+      right: 0;
+      top: 0;
+    }
+    .menu-mobile{
+      display: block;
+      color: #FFF;
+      background-color: rgba(29, 197, 151, 0.97);
+      text-align: center;
+      padding: 12px 0;
+    }
+    .chiot{
+      width: 20%;
+    }
+    .colis{
+      width: 80%;
+      height: 347px;
+    }
+    .croq{
+      width: 60%;
+      padding: 4%;
+    }
+    .menu1.responsive a {
+      display: block;
+      text-align: left;
+      padding: 7px 50px;
+      width: 100%;
+      max-height: 100px;
+    }
+  ul{
+    font-size: 0.73em;
+    margin: 0 -16px;
+    }
+  #chiot{
+    width: 170px;
+    height: auto;
+  }
+}
